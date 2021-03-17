@@ -9,7 +9,7 @@ for (let i = 0; i < 42; i++) {
   if(Math.random() < .5) {
     addTag('City', faker.address.city());
   } else {
-    addTag('Company', faker.company.companyName());
+    addTag('Company', faker.lorem.paragraphs());
   }
 }
 
@@ -18,8 +18,9 @@ function addTag(type, label) {
     setTimeout(() => {
       let t = {
         id: id++,
-        label,
+        label,  
         type,
+        date:  new Date((Date.now() - 2200000000) + Math.random() * (Date.now() - (Date.now() - 2200000000))).toJSON()
       };
       tags.push(t);
       resolve(t);

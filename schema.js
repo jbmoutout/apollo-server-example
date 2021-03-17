@@ -11,6 +11,7 @@ const typeDefs = [`
   type Tag {
     id: Int
     label: String
+    date: String
     type: String
   }
 
