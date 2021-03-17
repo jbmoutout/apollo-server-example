@@ -15,6 +15,7 @@ const SUBSCRIPTIONS_PATH = '/subscriptions';
 
 var app = express();
 
+
 app.use(cors());
 
 app.options('*', cors())
